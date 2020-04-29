@@ -24,3 +24,6 @@
 황건하 : 
 - 그외 검색 기능(가격대, 음식점 이름, 별점, 번호) 완성
 - 파일 저장 및 불러오는 프로그램 작성
+
+wiki 페이지
+https://github.com/21900810/2020OSS_teamproject.wiki.git
