@@ -1,8 +1,10 @@
 #include <stido.h>
 #include <string.h>
+#include "manager.c"
 
 int main(void){
 
+	H_delivery* H[100];
 	int curcount = 0, count = 0, menu;
 
 	while(1){
