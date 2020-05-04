@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 typedef struct{
 	char market[60];
 	char phone[60];
