@@ -21,3 +21,4 @@ int deletedelivery(H_delivery *H);
 int selectDataNo(H_delivery *H, int count);
 //메뉴 조회
 int selectdelivery();
+

@@ -36,7 +36,7 @@ int selectdelivery(){
 
 int selectDataNo(H_delivery *H, int count){
 	int num;
-	listdelivery(H, count);
+	listdatadelivery(H, count);
 	printf("==> 번호는 (취소:0)? ");
 	scanf("%d", &num);
 	getchar();
