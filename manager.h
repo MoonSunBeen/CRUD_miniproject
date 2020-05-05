@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct{
 	char market[60];
@@ -16,3 +17,7 @@ int adddelivery(H_delivery *H);
 int updatedelivery(H_delivery *H);
 //상품삭제
 int deletedelivery(H_delivery *H);
+//상품 번호 조회
+int selectDataNo(H_delivery *H, int count);
+//메뉴 조회
+int selectdelivery();
