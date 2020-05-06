@@ -1,5 +1,3 @@
-#include <stido.h>
-#include <string.h>
 #include "manager.c"
 
 int main(void){
@@ -8,7 +6,7 @@ int main(void){
 	int curcount = 0, count = 0, menu;
 
 	while(1){
-		menu = selectMenu();
+		menu = selectdelivery();
 		getchar();
 		if(menu == 0) break;
 		if(menu == 1 || menu == 3 || menu == 4){
