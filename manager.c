@@ -1,5 +1,16 @@
 #include "manager.h"
 
+void listdatadelivery(H_delivery *H, int count){
+	printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
+	printf("***********************************************************\n");
+	for(int i = 0 ; i < count ; i++{
+	if(H[i].price == -1 || H[i].star == -1) continue;
+	printf("%2.", i+1);
+	readdelivery(&h[i]);
+	}
+	printf("\n");
+}
+
 int updatedelivery(H_delivery *H){
 	printf("새로운 가게 이름?");
 	scanf("%[^\n]", H->market);
