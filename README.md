@@ -17,6 +17,7 @@
 
 # 역할 분담
 문선빈 :
+- makefile 작성
 - main 문 작성
 - Create, Read 작성
 
