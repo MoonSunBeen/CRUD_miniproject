@@ -20,6 +20,23 @@ int deletedelivery(H_delivery *H){
 	return 0;
 }
 
+void savedatadeliveryu(H_delivery *H, int count);
+	FILE *fp;
+	fp = fopen("delivery.txt", "wt");
+	fprintf(fp, "%s %s, %d, %d, %s\n",H->market ,H->phone, H->price, H->star, H->menu);
+	fclose(fp);
+	printf("=>저장됨!!!\n");
+}
+void loaddata(H_delivery *H){
+	FILE *fp;
+	fp = fopen("delivery.txt", "rt");
+	fscanf(fp, "%s %s, %d, %d, %[^\n]",H->market ,H->phone, &H->price, &H->star, H->menu);
+	fclose(fp);
+	printf("=>로드됨!!!\n");
+}
+
+
+
 int selectdelivery(){
 	int delivery;
 	printf("***********한동대학교배달음식!*************\n");

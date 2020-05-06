@@ -21,4 +21,7 @@ int deletedelivery(H_delivery *H);
 int selectDataNo(H_delivery *H, int count);
 //메뉴 조회
 int selectdelivery();
-
+//파일 저장
+void savedatadelivery(H_delivery *H, int count);
+//파일 로드
+void loaddatadelivery(H_delivery *H);
