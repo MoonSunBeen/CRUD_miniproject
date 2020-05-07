@@ -3,7 +3,7 @@
 void listdatadelivery(H_delivery *H, int count){
 	printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
 	printf("***********************************************************\n");
-	for(int i = 0 ; i < count ; i++{
+	for(int i = 0 ; i < count ; i++){
 	if(H[i].price == -1 || H[i].star == -1) continue;
 	printf("%2.", i+1);
 	readdelivery(&h[i]);
@@ -27,23 +27,35 @@ int updatedelivery(H_delivery *H){
 
 int deletedelivery(H_delivery *H){
 	H->price = -1;
-	printf(=>삭제됨!);
+	printf("=>삭제됨!");
 	return 0;
 }
 
-void savedatadeliveryu(H_delivery *H, int count);
+void savedatadeliveryu(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
-	fprintf(fp, "%s %s, %d, %d, %s\n",H->market ,H->phone, H->price, H->star, H->menu);
+	for(int i=0; i<count; i++){
+		fprintf(fp, "%s %s, %d, %d, %s\n",H->market ,H->phone, H->price, H->star, H->menu);
+	}
 	fclose(fp);
 	printf("=>저장됨!!!\n");
 }
-void loaddata(H_delivery *H){
+int loaddata(H_delivery *H){
+	int count = 0;
 	FILE *fp;
 	fp = fopen("delivery.txt", "rt");
-	fscanf(fp, "%s %s, %d, %d, %[^\n]",H->market ,H->phone, &H->price, &H->star, H->menu);
+	if(fp == NULL){
+		printf("=>파일 없음\n");
+		return 0;
+	}
+	while(1){
+		fscanf(fp, "%s %s, %d, %d, %[^\n]",H->market ,H->phone, &H->price, &H->star, H->menu);
+		count++;
+		if(feof(fp)) break;
+	}
 	fclose(fp);
-	printf("=>로드됨!!!\n");
+	printf("=>로딩 성공!!!\n");
+	return count;
 }
 
 
@@ -58,7 +70,7 @@ int selectdelivery(){
 	printf("******     0. 종료                   ******\n");
 	printf("*******************************************\n\n");
 	printf("==> 원하는 메뉴는? ");
-	scanf("%d", delivery);
+	scanf("%d", &delivery);
 	return delivery;
 }
 

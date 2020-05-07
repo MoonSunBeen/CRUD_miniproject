@@ -24,4 +24,4 @@ int selectdelivery();
 //파일 저장
 void savedatadelivery(H_delivery *H, int count);
 //파일 로드
-void loaddatadelivery(H_delivery *H);
+int loaddatadelivery(H_delivery *H);
