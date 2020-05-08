@@ -4,7 +4,10 @@ int main(void){
 
 	H_delivery* H[100];
 	int curcount = 0, count = 0, menu;
-
+	
+	count = loaddatadelivery(H);
+	curcount = count ; 
+	
 	while(1){
 		menu = selectdelivery();
 		getchar();
@@ -22,6 +25,13 @@ int main(void){
 				printf("=> 취소되었습니다!"); continue;
 			}
 			updateProduct(&H[no-1]);
+		}
+		else if(menu == 4){
+			int no = selectDataNo(H, curcount);
+			int (no == 0){
+				printf("=> 취소되었습니다!");
+				continue;
+			}
 		}
 
 	}
