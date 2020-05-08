@@ -4,9 +4,9 @@ void listdatadelivery(H_delivery *H, int count){
 	printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
 	printf("***********************************************************\n");
 	for(int i = 0 ; i < count ; i++){
-	if(H[i].price == -1 || H[i].star == -1) continue;
-	printf("%2.", i+1);
-	readdelivery(&h[i]);
+		if(H[i].price == -1 || H[i].star == -1) continue;
+		printf("%2.", i+1);
+		readdelivery(&h[i]);
 	}
 	printf("\n");
 }
@@ -31,7 +31,7 @@ int deletedelivery(H_delivery *H){
 	return 0;
 }
 
-void savedatadeliveryu(H_delivery *H, int count){
+void savedatadelivery(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
 	for(int i=0; i<count; i++){
@@ -40,7 +40,7 @@ void savedatadeliveryu(H_delivery *H, int count){
 	fclose(fp);
 	printf("=>저장됨!!!\n");
 }
-int loaddata(H_delivery *H){
+int loaddatadelivery(H_delivery *H){
 	int count = 0;
 	FILE *fp;
 	fp = fopen("delivery.txt", "rt");
