@@ -32,6 +32,12 @@ int main(void){
 				printf("=> 취소되었습니다!");
 				continue;
 			}
+			int deleteok;
+			printf("정말로 삭제하시겠습니까?(삭제 : 1)");
+			scanf("%d", &deleteok);
+			if(deleteok == 1){
+				if(deletedelivery(&H[no-1]) count --;
+			}
 		}
 
 	}
