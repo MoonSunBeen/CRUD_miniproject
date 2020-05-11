@@ -25,3 +25,6 @@ int selectdelivery();
 void savedatadelivery(H_delivery *H, int count);
 //파일 로드
 int loaddatadelivery(H_delivery *H);
+//검색함수
+//이름검색
+void searchdelivery(H_delivery *p[], int count);
