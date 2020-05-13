@@ -82,3 +82,21 @@ int selectDataNo(H_delivery *H, int count){
 	getchar();
 	return num;
 }
+
+int adddelivery(H_delivery *H){
+	printf("가게 이름?");
+	scanf("%[^\n]", H->market);
+
+	printf("가게 전화번호?");
+	scanf("%s", H->phone);
+
+	printf("대표메뉴?");
+	scanf("%[^\n]", H->menu);
+
+	printf("데표메뉴의 가격?");
+	scanf("%d", &H->price);
+
+	printf("가게의 별점?");
+	scanf("%d", &H->star);
+	return 1;
+}
