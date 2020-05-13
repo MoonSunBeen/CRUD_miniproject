@@ -17,13 +17,17 @@
 
 # 역할 분담
 문선빈 :
+- makefile 작성
 - main 문 작성
-- 기본적인 CRUD 프로그램 작성
+- Create, Read 작성
 
 
 황건하 : 
-- 그외 검색 기능(가격대, 음식점 이름, 별점, 번호) 완성
-- 파일 저장 및 불러오는 프로그램 작성
+- 헤더파일 생성
+- Update, Delete 작성
+- 파일 Losad와 Save 작성
+
+추후에 검색기능 역할 배분
 
 wiki 페이지
 https://github.com/21900810/2020OSS_teamproject.wiki.git
