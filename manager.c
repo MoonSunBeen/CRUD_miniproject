@@ -99,8 +99,8 @@ void searchdelivery(H_delivery *H[], int count){
 	printf("==> 찾고싶은 음식은?");
 	scanf("%[^\n]", smarket);
 	for(int i=0; i<count; i++){
-		if(strstr(H[i].market, smarket)){
-			readdelivery(H[i].market, i);
+		if (strstr(H[i]->market, smarket)) {
+			readdelivery(*H[i]);
 			scount++;
 		}
 	}
