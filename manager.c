@@ -127,7 +127,7 @@ int adddelivery(H_delivery *H){
 	return 1;
 }
 
-void searchstarscore(H_delivery* H, int count){
+void searchstarscore(H_delivery* H[], int count){
 	int scount = 0; 
 	char search[20];
 
