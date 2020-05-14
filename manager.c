@@ -40,7 +40,7 @@ void savedatadelivery(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
 	for(int i=0; i<count; i++){
-		fprintf(fp, "%s %s, %d, %d, %s\n",H[count]->market ,H[count]->phone, H[count]->price, H[count]->star, H[count]->menu);
+		fprintf(fp, "%s %s, %d, %d, %s\n",H->market ,H->phone, H->price, H->star, H->menu);
 	}
 	fclose(fp);
 	printf("=>저장됨!!!\n");
@@ -55,7 +55,7 @@ int loaddatadelivery(H_delivery *H[]){
 	}
 	while(1){
 		H[count] = (H_delivery*)malloc(sizeof(H_delivery));
-		fscanf(fp, "%s %s, %d, %d, %[^\n]",H->market ,H->phone, &H->price, &H->star, H->menu);
+		fscanf(fp, "%s %s, %d, %d, %[^\n]",H[count]->market ,H[count]->phone, &H[count]->price, &H[count]->star, H[count]->menu);
 		count++;
 		if(feof(fp)) break;
 	}
