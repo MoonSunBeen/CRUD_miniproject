@@ -18,11 +18,11 @@ void readdelivery(H_delivery H) {
 
 int updatedelivery(H_delivery *H){
 	printf("새로운 가게 이름?");
-	scanf("%[^\n]", H->market);
+	scanf("%[^\n]s", H->market);
 	printf("새로운 가게 전화번호?");
-	scanf("%s", H->phone);
+	scanf("%[^\n]s", H->phone);
 	printf("새로운 대표메뉴?");
-	scanf("%[^\n]", H->menu);
+	scanf("%[^\n]s", H->menu);
 	printf("데표메뉴의 가격?");
 	scanf("%d", &H->price);
 	printf("가게의 별점?");
