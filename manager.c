@@ -1,12 +1,13 @@
 #include "manager.h"
 
-void listdatadelivery(H_delivery *H, int count){
+void listdatadelivery(H_delivery *H[], int count){
 	printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
 	printf("***********************************************************\n");
-	for(int i = 0 ; i < count ; i++){
-		if(H[i].price == -1 || H[i].star == -1) continue;
-		printf("%2.", i+1);
-		readdelivery(&H[i]);
+	for (int i = 0; i < count; i++) {
+		if (H[i] != NULL) {
+			printf("%2d", i + 1);
+			readdelivery(*H[i]);
+		}
 	}
 	printf("\n");
 }
