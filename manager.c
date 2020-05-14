@@ -138,7 +138,7 @@ void searchstarscore(H_delivery* H[], int count){
 
 	for (int i = 0; i < count; i++) {
 		if (H[i]->market == NULL) continue;
-		if (strstr(H[i->star, search)) {
+		if (strstr(H[i]->star, search)) {
 			readdelivery(*H[i]);
 		} scount++;
 	}
