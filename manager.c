@@ -155,7 +155,7 @@ void searchprice(H_delivery* H[], int count){
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
-		if (H[i] == NULL) continue;
+		if (H[i]->market == NULL) continue;
 		if (strstr(H[i]->price, search)) {
 			readdelivery(*H[i]);
 		} scount++;
