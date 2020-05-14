@@ -1,6 +1,6 @@
 #include "manager.h"
 
-void listdatadelivery(H_delivery *H[], int count){
+void listdatadelivery(H_delivery *H, int count){
 	printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
 	printf("***********************************************************\n");
 	for (int i = 0; i < count; i++) {
@@ -46,12 +46,12 @@ void savedatadelivery(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
 	for(int i=0; i<count; i++){
-		fprintf(fp, "%s\n%s %d %d %s\n",H->menu ,H->phone, H->price, H->star, H->menu);
+		fprintf(fp, "%s\n%s %d %d %s\n",H->market ,H->phone, H->price, H->star, H->menu);
 	}
 	fclose(fp);
 	printf("=>저장됨!!!\n");
 }
-int loaddatadelivery(H_delivery *H[]){
+int loaddatadelivery(H_delivery *H){
 	int count = 0;
 	FILE *fp;
 	fp = fopen("delivery.txt", "rt");
@@ -139,7 +139,7 @@ int adddelivery(H_delivery *H){
 	return 1;
 }
 
-void searchstarscore(H_delivery* H[], int count){
+void searchstarscore(H_delivery* H, int count){
 	int scount = 0; 
 	int score;
 
