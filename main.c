@@ -52,6 +52,10 @@ int main(void){
 			if (count == 0) printf("==> 데이터가 없습니다!\n");
 			else searchstarscore(H, curcount);
 		}
+		else if (menu == 8) {
+			if (count == 0) printf("==> 데이터가 없습니다!\n");
+			else searchprice(H, curcount);
+		}
 	}
 
 	printf("\n종료됨!\n");
