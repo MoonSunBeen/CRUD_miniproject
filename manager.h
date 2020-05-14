@@ -29,8 +29,8 @@ void savedatadelivery(H_delivery *H, int count);
 int loaddatadelivery(H_delivery *H);
 //검색함수
 //이름 검색
-void searchdelivery(H_delivery *p[], int count);
+void searchdelivery(H_delivery *H[], int count);
 //별점 검색
 void searchstarscore(H_delivery *H, int count);
 //가격 검색
-void searchdelivery(H_delivery *H[], int count);
+void searchprice(H_delivery *H[], int count);
