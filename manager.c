@@ -12,8 +12,8 @@ void listdatadelivery(H_delivery *H[], int count){
 	printf("\n");
 }
 
-void readdelivery(H_delivery* H) {
-	printf("%-15s %-15s %-15s %4d[원] %d[star]\n", H->market, H->phone, H->menu, H->price, H->star);
+void readdelivery(H_delivery H) {
+	printf("%-15s %-15s %-15s %4d[원] %d[star]\n", H.market, H.phone, H.menu, H.price, H.star);
 }
 
 int updatedelivery(H_delivery *H){
