@@ -115,7 +115,7 @@ int adddelivery(H_delivery *H){
 	scanf("%[^\n]", H->market);
 
 	printf("가게 전화번호?");
-	scanf("%s", H->phone);
+	scanf("%[^\n]s, H->phone);
 
 	printf("대표메뉴?");
 	scanf("%[^\n]", H->menu);
