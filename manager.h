@@ -14,7 +14,7 @@ void listdatadelivery(H_delivery *H, int count);
 //상품추가
 int adddelivery(H_delivery *H);
 //상품읽기
-void readdelivery(H_delivery *H);
+void readdelivery(H_delivery H);
 //상품수정
 int updatedelivery(H_delivery *H);
 //상품삭제
@@ -31,6 +31,6 @@ int loaddatadelivery(H_delivery *H);
 //이름 검색
 void searchdelivery(H_delivery *H[], int count);
 //별점 검색
-void searchstarscore(H_delivery *H, int count);
+void searchstarscore(H_delivery *H[], int count);
 //가격 검색
 void searchprice(H_delivery *H[], int count);

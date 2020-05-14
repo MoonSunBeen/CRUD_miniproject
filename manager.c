@@ -5,14 +5,14 @@ void listdatadelivery(H_delivery *H, int count){
 	printf("***********************************************************\n");
 	for(int i = 0 ; i < count ; i++){
 		if(H[i].price == -1 || H[i].star == -1) continue;
-		printf("%2.", i+1);
-		readdelivery(&H[i]);
+		printf("%d.2", i+1);
+		readdelivery(H[i]);
 	}
 	printf("\n");
 }
 
-void readdelivery(H_delivery* H) {
-	printf("%-15s %-15s %-15s %4d[원] %d[star]\n", H->market, H->phone, H->menu, H->price, H->star);
+void readdelivery(H_delivery H) {
+	printf("%-15s %-15s %-15s %4d[원] %d[star]\n", H.market, H.phone, H.menu, H.price, H.star);
 }
 
 int updatedelivery(H_delivery *H){
@@ -98,8 +98,8 @@ void searchdelivery(H_delivery *H[], int count){
 	printf("==> 찾고싶은 음식은?");
 	scanf("%[^\n]", smarket);
 	for(int i=0; i<count; i++){
-		if(strstr(H[i].market, smarket)){
-			readdelivery(H[i].market, i);
+		if(strstr(H[i]->market, smarket)){
+			readdelivery(*H[i]);
 			scount++;
 		}
 	}
@@ -126,7 +126,7 @@ int adddelivery(H_delivery *H){
 	return 1;
 }
 
-void searchstarscore(H_delivery* H, int count){
+void searchstarscore(H_delivery* H[], int count){
 	int scount = 0; 
 	char search[20];
 
@@ -136,7 +136,7 @@ void searchstarscore(H_delivery* H, int count){
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
-		if (p[i] == NULL) continue;
+		if (H[i] == NULL) continue;
 		if (strstr(H[i]->star, search)) {
 			readdelivery(*H[i]);
 		} scount++;
@@ -146,16 +146,16 @@ void searchstarscore(H_delivery* H, int count){
 
 void searchprice(H_delivery* H[], int count){
 	int scount = 0; 
-	char search[20];
+	int search;
 
 	printf("원하는 가격은? ");
-	scanf("%s", search);
+	scanf("%d", &search);
 
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
-		if (p[i] == NULL) continue;
-		if (strstr(H[i]->price, search)) {
+		if (H[i] == NULL) continue;
+		if (H[i]->price == search) {
 			readdelivery(*H[i]);
 		} scount++;
 	}
