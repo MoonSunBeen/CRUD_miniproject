@@ -13,7 +13,7 @@ int main(void){
 		getchar();
 		if(menu == 0) break;
 		if(menu == 1 || menu == 3 || menu == 4){
-			if(count == 0){printf("데이터가 없습니다!\n"); continue;}
+			if(count == 0){printf("=> 데이터가 없습니다!\n"); continue;}
 			}
 		if(menu == 1) listdatadelivery(H, curcount);
 		else if(menu == 2){
@@ -41,8 +41,12 @@ int main(void){
 		}
 
 		else if (menu == 5) {
-			if (count == 0) printf("데이터가 없습니다!\n");
+			if (count == 0) printf("=> 데이터가 없습니다!\n");
 			else savedatadelivery(H, curcount);
+		}
+		else if (menu == 6) {
+			if (count == 0) printf("==> 데이터가 없습니다!\n");
+			else searchdelivery(H, curcount);
 		}
 	}
 
