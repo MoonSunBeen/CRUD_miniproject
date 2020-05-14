@@ -18,16 +18,19 @@ void readdelivery(H_delivery H) {
 
 int updatedelivery(H_delivery *H){
 	printf("새로운 가게 이름?");
-	scanf("%[^\n]s", H->market);
 	getchar();
+	scanf("%[^\n]s", H->market);
+	
 	
 	printf("새로운 가게 전화번호?");
-	scanf("%[^\n]s", H->phone);
 	getchar();
+	scanf("%[^\n]s", H->phone);
+	
 	
 	printf("새로운 대표메뉴?");
-	scanf("%[^\n]s", H->menu);
 	getchar();
+	scanf("%[^\n]s", H->menu);
+	
 	
 	printf("데표메뉴의 가격?");
 	scanf("%d", &H->price);
@@ -118,16 +121,19 @@ void searchdelivery(H_delivery *H[], int count){
 
 int adddelivery(H_delivery *H){
 	printf("가게 이름?");
-	scanf("%[^\n]s", H->market);
 	getchar();
+	scanf("%[^\n]s", H->market);
+	
 
 	printf("가게 전화번호?");
-	scanf("%[^\n]s", H->phone);
 	getchar();
+	scanf("%[^\n]s", H->phone);
+	
 
 	printf("대표메뉴?");
-	scanf("%[^\n]s", H->menu);
 	getchar();
+	scanf("%[^\n]s", H->menu);
+	
 	
 	printf("데표메뉴의 가격?");
 	scanf("%d", &H->price);
