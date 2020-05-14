@@ -14,7 +14,7 @@ void listdatadelivery(H_delivery *H[], int count);
 //상품추가
 int addelivery(H_delivery H);
 //상품읽기
-void readdelivery(H_delivery *H);
+void readdelivery(H_delivery H);
 //상품수정
 int updatedelivery(H_delivery *H);
 //상품삭제
