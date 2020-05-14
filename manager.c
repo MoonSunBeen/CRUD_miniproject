@@ -139,7 +139,7 @@ void searchstarscore(H_delivery* H[], int count){
 	for (int i = 0; i < count; i++) {
 		if (H[i].market == NULL) continue;
 		if (strstr(H[i].star, search)) {
-			readdelivery(H[i]);
+			readdelivery(*H[i]);
 		} scount++;
 	}
 	if (scount == 0) printf("==> 검색결과 없음!!!\n");
