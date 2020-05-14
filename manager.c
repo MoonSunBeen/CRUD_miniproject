@@ -45,7 +45,7 @@ void savedatadelivery(H_delivery *H, int count){
 	fclose(fp);
 	printf("=>저장됨!!!\n");
 }
-int loaddatadelivery(H_delivery *H){
+int loaddatadelivery(H_delivery *H[]){
 	int count = 0;
 	FILE *fp;
 	fp = fopen("delivery.txt", "rt");
@@ -54,6 +54,7 @@ int loaddatadelivery(H_delivery *H){
 		return 0;
 	}
 	while(1){
+		H[count] = (H_delivery*)malloc(sizeof(H_delivery));
 		fscanf(fp, "%s %s, %d, %d, %[^\n]",H->market ,H->phone, &H->price, &H->star, H->menu);
 		count++;
 		if(feof(fp)) break;
