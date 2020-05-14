@@ -3,7 +3,7 @@
 
 int main(void){
 
-	H_delivery* H[100];
+	H_delivery H[100];
 	int curcount = 0, count = 0, menu;
 	
 	count = loaddatadelivery(H);
@@ -56,6 +56,10 @@ int main(void){
 		else if (menu == 8) {
 			if (count == 0) printf("==> 데이터가 없습니다!\n");
 			else searchprice(H, curcount);
+		}
+		else if (menu == 9) {
+			if (count == 0) printf("==> 데이터가 없습니다!\n");
+			else searchphone(H, curcount);
 		}
 	}
 
