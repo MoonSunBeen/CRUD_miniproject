@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 # Prerequisites
 *.d
 
@@ -50,3 +53,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+>>>>>>> 97650bc35aa297f67e6423f390e8c247750d5adb
