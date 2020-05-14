@@ -113,14 +113,14 @@ void searchstarscore(H_delivery* H, int count){
 	int scount = 0; 
 	char search[20];
 
-	printf("원하는 제품명은? ");
+	printf("원하는 별점은? ");
 	scanf("%s", search);
 
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
 		if (p[i] == NULL) continue;
-		if (strstr(H[i]->name, search)) {
+		if (strstr(H[i]->star, search)) {
 			readdelivery(*H[i]);
 		} scount++;
 	}
@@ -131,14 +131,14 @@ void searchprice(H_delivery* H[], int count){
 	int scount = 0; 
 	char search[20];
 
-	printf("원하는 제품명은? ");
+	printf("원하는 가격은? ");
 	scanf("%s", search);
 
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
 		if (p[i] == NULL) continue;
-		if (strstr(H[i]->name, search)) {
+		if (strstr(H[i]->price, search)) {
 			readdelivery(*H[i]);
 		} scount++;
 	}
