@@ -91,6 +91,23 @@ int selectDataNo(H_delivery *H, int count){
 	return num;
 }
 
+
+void searchdelivery(H_delivery *H[], int count){
+	int scount = 0;
+	char smarket[30];
+	printf("==> 찾고싶은 음식은?");
+	scanf("%[^\n]", smarket);
+	for(int i=0; i<count; i++){
+		if(strstr(H[i].market, smarket)){
+			readdelivery(H[i].market, i);
+			scount++;
+		}
+	}
+	if(scount == 0) printf("==>검색된 메뉴 없음");
+	printf("\n");
+}
+
+
 int adddelivery(H_delivery *H){
 	printf("가게 이름?");
 	scanf("%[^\n]", H->market);
@@ -147,3 +164,4 @@ void searchprice(H_delivery* H[], int count){
 
 
 	
+
