@@ -12,7 +12,7 @@ typedef struct{
 //상품 조회
 void listdatadelivery(H_delivery *H[], int count);
 //상품추가
-int adddelivery(H_delivery H);
+int adddelivery(H_delivery *H);
 //상품읽기
 void readdelivery(H_delivery H);
 //상품수정
