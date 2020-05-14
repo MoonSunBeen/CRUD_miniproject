@@ -126,4 +126,24 @@ void searchstarscore(H_delivery* H, int count){
 	}
 	if (scount == 0) printf("==> 검색결과 없음!!!\n");
 }
+
+void searchprice(H_delivery* H[], int count){
+	int scount = 0; 
+	char search[20];
+
+	printf("원하는 제품명은? ");
+	scanf("%s", search);
+
+    printf("*******************************************************\n");
+
+	for (int i = 0; i < count; i++) {
+		if (p[i] == NULL) continue;
+		if (strstr(H[i]->name, search)) {
+			readdelivery(*H[i]);
+		} scount++;
+	}
+	if (scount == 0) printf("==> 검색결과 없음!!!\n");
+}
+
+
 	
