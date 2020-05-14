@@ -46,7 +46,7 @@ void savedatadelivery(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
 	for(int i=0; i<count; i++){
-		fprintf(fp, "%s\n%s %d %d %s\n",H->market ,H->phone, H->price, H->star, H->menu);
+		fprintf(fp, "%s %s %d %d %s\n",H[i].menu ,H[i].phone, H[i].price, H[i].star, H[i].market);
 	}
 	fclose(fp);
 	printf("=>저장됨!!!\n");
@@ -61,8 +61,7 @@ int loaddatadelivery(H_delivery *H){
 	}
 	while(1){
 		if(feof(fp)) break;
-		fscanf(fp, "%[^\n]",H[count].market);
-		fscanf(fp, "%s %d %d %[^\n]",H[count].phone, &H[count].price, &H[count].star, H[count].menu);
+		fscanf(fp, "%s %s %d %d %[^\n]", H[count].menu, H[count].phone, &H[count].price, &H[count].star, H[count].market);
 		count++;
 	}
 	fclose(fp);
@@ -104,11 +103,14 @@ int selectDataNo(H_delivery *H, int count){
 void searchdelivery(H_delivery *H, int count){
 	int scount = 0;
 	char smarket[30];
-	printf("==> 찾고싶은 음식은?");
+	printf("==> 찾고싶은 가게이름은?");
 	getchar();
 	scanf("%[^\n]", smarket);
 	for(int i=0; i<count; i++){
 		if (strstr(H[i].market, smarket)) {
+			printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
+			printf("***********************************************************\n");
+			printf("%d ", i+1);
 			readdelivery(&H[i]);
 			scount++;
 		}
@@ -151,6 +153,9 @@ void searchstarscore(H_delivery* H, int count){
 	for (int i = 0; i < count; i++) {
 		if (H[i].market == NULL) continue;
 		if (H[i].star == score) {
+			printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
+			printf("***********************************************************\n");
+			printf("%d ", i+1);
 			readdelivery(&H[i]);
 			scount++;
 		}
@@ -162,15 +167,18 @@ void searchprice(H_delivery* H, int count){
 	int scount = 0; 
 	int search;
 
-	printf("원하는 가격은? ");
+	printf("원하는 가격대는? ");
 	scanf("%d", &search);
 
     printf("*******************************************************\n");
 
 	for (int i = 0; i < count; i++) {
 		if (H[i].price/search == 1) {
+			printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
+			printf("***********************************************************\n");
+			printf("%d ", i+1);
 			readdelivery(&H[i]);
-		scount++;
+			scount++;
 		}
 	}
 	if (scount == 0) printf("==> 검색결과 없음!!!\n");
@@ -183,6 +191,9 @@ void searchphone(H_delivery *H, int count){
 	scanf("%s", sphone);
 	for(int i=0; i<count; i++){
 		if (strstr(H[i].phone, sphone)) {
+			printf("\nNo. 가게이름        전화번호     대표메뉴   가격    별점\n");
+			printf("***********************************************************\n");
+			printf("%d ", i+1);
 			readdelivery(&H[i]);
 			scount++;
 		}
