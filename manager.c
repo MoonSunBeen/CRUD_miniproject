@@ -40,7 +40,7 @@ void savedatadelivery(H_delivery *H, int count){
 	FILE *fp;
 	fp = fopen("delivery.txt", "wt");
 	for(int i=0; i<count; i++){
-		fprintf(fp, "%s %s, %d, %d, %s\n",H->market ,H->phone, H->price, H->star, H->menu);
+		fprintf(fp, "%s %s, %d, %d, %s\n",H[count]->market ,H[count]->phone, H[count]->price, H[count]->star, H[count]->menu);
 	}
 	fclose(fp);
 	printf("=>저장됨!!!\n");
