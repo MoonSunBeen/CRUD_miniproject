@@ -110,7 +110,7 @@ void searchdelivery(H_delivery *H[], int count){
 }
 
 
-int adddelivery(H_delivery *H){
+int adddelivery(H_delivery H){
 	printf("가게 이름?");
 	scanf("%[^\n]", H->market);
 
