@@ -112,13 +112,13 @@ void searchdelivery(H_delivery *H[], int count){
 
 int adddelivery(H_delivery *H){
 	printf("가게 이름?");
-	scanf("%[^\n]", H->market);
+	scanf("%[^\n]s", H->market);
 
 	printf("가게 전화번호?");
-	scanf("%[^\n]", H->phone);
+	scanf("%[^\n]s", H->phone);
 
 	printf("대표메뉴?");
-	scanf("%[^\n]", H->menu);
+	scanf("%[^\n]s", H->menu);
 
 	printf("데표메뉴의 가격?");
 	scanf("%d", &H->price);
