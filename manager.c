@@ -6,7 +6,7 @@ void listdatadelivery(H_delivery *H, int count){
 	for(int i = 0 ; i < count ; i++){
 		if(H[i].price == -1 || H[i].star == -1) continue;
 		printf("%2.", i+1);
-		readdelivery(&h[i]);
+		readdelivery(&H[i]);
 	}
 	printf("\n");
 }
