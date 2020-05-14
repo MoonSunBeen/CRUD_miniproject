@@ -1,4 +1,5 @@
-#include "manager.c"
+nclude "manager.h"
+
 
 int main(void){
 
@@ -24,7 +25,7 @@ int main(void){
 			if(no == 0){
 				printf("=> 취소되었습니다!"); continue;
 			}
-			updateProduct(&H[no-1]);
+			updatedelivery(&H[no-1]);
 		}
 		else if(menu == 4){
 			int no = selectDataNo(H, curcount);
@@ -36,7 +37,7 @@ int main(void){
 			printf("정말로 삭제하시겠습니까?(삭제 : 1)");
 			scanf("%d", &deleteok);
 			if(deleteok == 1){
-				if(deletedelivery(&H[no-1]) count --;
+				if(deletedelivery(&H[no-1])) count --;
 			}
 		}
 
@@ -62,3 +63,4 @@ int main(void){
 	return 0;
 
 }
+
