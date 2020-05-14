@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 typedef struct{
@@ -34,4 +34,3 @@ void searchdelivery(H_delivery *H[], int count);
 void searchstarscore(H_delivery *H[], int count);
 //가격 검색
 void searchprice(H_delivery *H[], int count);
-

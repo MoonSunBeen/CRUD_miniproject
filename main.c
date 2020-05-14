@@ -1,4 +1,4 @@
-nclude "manager.h"
+#include "manager.h"
 
 
 int main(void){
@@ -63,4 +63,3 @@ int main(void){
 	return 0;
 
 }
-
