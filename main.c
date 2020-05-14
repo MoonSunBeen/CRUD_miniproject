@@ -1,4 +1,4 @@
-#include "manager.c"
+#include "manager."
 
 int main(void){
 
