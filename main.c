@@ -25,7 +25,7 @@ int main(void){
 			if(no == 0){
 				printf("=> 취소되었습니다!"); continue;
 			}
-			updateProduct(&H[no-1]);
+			updatedelivery(&H[no-1]);
 		}
 		else if(menu == 4){
 			int no = selectDataNo(H, curcount);
