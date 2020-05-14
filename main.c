@@ -28,7 +28,7 @@ int main(void){
 		}
 		else if(menu == 4){
 			int no = selectDataNo(H, curcount);
-			int (no == 0){
+			if (no == 0){
 				printf("=> 취소되었습니다!");
 				continue;
 			}
@@ -40,5 +40,13 @@ int main(void){
 			}
 		}
 
+		else if (menu == 5) {
+			if (count == 0) printf("데이터가 없습니다!\n");
+			else savedatadelivery(H, curcount);
+		}..
 	}
+
+	printf("\n종료됨!\n");
+	return 0;
+
 }
